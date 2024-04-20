@@ -3,15 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- CSS Reset -->
   <link rel="stylesheet" href="./assets/css/reset.css">
+
   <!-- Styles CSS -->
   <link rel="stylesheet" href="./assets/css/styles.css">
+
   <!-- Form CSS -->
   <link rel="stylesheet" href="./assets/css/form.css">
+
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/4982c8e01d.js" crossorigin="anonymous"></script>
+
   <title>Alemar Web Dev Blog</title>
 </head>
 <body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container container">
+
+      <!-- dark mode toggler -->
+      <button class="dark-mode-toggler">
+        <i class="fa-solid fa-moon moon-icon"></i>
+      </button>
+    </div>
+  </header>
   
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Landing -->
+    <section class="landing">
+      <div class="landing-container container">
+
+        <!-- Landing Intro Area -->
+        <div class="landing-intro-area">
+          <h1>
+            Alemar Web Dev Blog
+          </h1>
+        </div>
+
+        <!-- Landing Form Area -->
+        <div class="landing-form-area">
+
+          <!-- form content -->
+          <div class="form-content">
+
+            <!-- form content heading -->
+            <h2>What's on your mind?</h2>
+
+            <!-- landing form -->
+            <form action="" class="landing-form">
+
+              <!-- Username Wrapper -->
+              <div class="username-wrapper">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+              </div>
+
+              <!-- title wrapper -->
+              <div class="title-wrapper">
+                <label for="title">Username</label>
+                <input type="text" id="title" required>
+              </div>
+
+              <!-- content wrapper -->
+              <div class="content-wrapper">
+                <label for="content">Content</label>
+                <input type="text" id="content" required>
+              </div>
+
+              <!-- form button -->
+              <button type="submit" class="form-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

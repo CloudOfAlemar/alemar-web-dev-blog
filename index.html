@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Font Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
   <!-- CSS Reset -->
   <link rel="stylesheet" href="./assets/css/reset.css">
 
@@ -12,9 +17,6 @@
 
   <!-- Form CSS -->
   <link rel="stylesheet" href="./assets/css/form.css">
-
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/4982c8e01d.js" crossorigin="anonymous"></script>
 
   <title>Alemar Web Dev Blog</title>
 </head>
@@ -26,7 +28,10 @@
 
       <!-- dark mode toggler -->
       <button class="dark-mode-toggler">
-        <i class="fa-solid fa-moon moon-icon"></i>
+        <div class="mode-wrapper">
+          <img src="./assets/images/sunny-outline.svg" alt="Light Mode Icon">
+          <img src="./assets/images/moon-outline.svg" alt="Dark Mode Icon">
+        </div>
       </button>
     </div>
   </header>

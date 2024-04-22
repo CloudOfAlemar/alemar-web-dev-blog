@@ -24,6 +24,12 @@ img {
   display: block;
 }
 
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Header */
 .header {
   padding: 2rem 0;

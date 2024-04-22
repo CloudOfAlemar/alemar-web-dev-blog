@@ -26,11 +26,14 @@
   <header class="header">
     <div class="header-container container">
 
+      <!-- header logo -->
+      <img src="./assets/images/alemar-logo.svg" alt="Blog Logo" class="header-logo">
+
       <!-- dark mode toggler -->
       <button class="dark-mode-toggler">
         <div class="mode-wrapper">
-          <img src="./assets/images/sunny-outline.svg" alt="Light Mode Icon">
-          <img src="./assets/images/moon-outline.svg" alt="Dark Mode Icon">
+          <img src="./assets/images/sunny-outline.svg" alt="Light Mode Icon" class="sun-icon">
+          <img src="./assets/images/moon-outline.svg" alt="Dark Mode Icon" class="moon-icon">
         </div>
       </button>
     </div>
@@ -46,7 +49,9 @@
         <!-- Landing Intro Area -->
         <div class="landing-intro-area">
           <h1>
-            Alemar Web Dev Blog
+            Alemar 
+            <span>Web Dev</span> 
+            Blog
           </h1>
         </div>
 
@@ -57,27 +62,30 @@
           <div class="form-content">
 
             <!-- form content heading -->
-            <h2>What's on your mind?</h2>
+            <h2>
+              What's on your
+              <span>mind?</span>
+            </h2>
 
             <!-- landing form -->
             <form action="" class="landing-form">
 
               <!-- Username Wrapper -->
               <div class="username-wrapper">
-                <label for="username">Username</label>
-                <input type="text" id="username" required>
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" class="form-input" required>
               </div>
 
               <!-- title wrapper -->
               <div class="title-wrapper">
-                <label for="title">Username</label>
-                <input type="text" id="title" required>
+                <label for="title" class="form-label">Title</label>
+                <input type="text" id="title" class="form-input" required>
               </div>
 
               <!-- content wrapper -->
               <div class="content-wrapper">
-                <label for="content">Content</label>
-                <input type="text" id="content" required>
+                <label for="content" class="form-label">Content</label>
+                <input type="text" id="content" class="form-input" required>
               </div>
 
               <!-- form button -->

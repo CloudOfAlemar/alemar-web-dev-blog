@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: .625rem;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #1E015B;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+}
+
+/* Header */
+.header {
+  padding: 2rem 0;
+}
+
+.header-logo {
+  width: 100px;
+}
+
+.container {
+  padding-right: 2rem;
+  padding-left: 2rem;
+  max-width: 576px;
+  margin: auto;
+}
+
+.dark-mode-toggler {
+  width: 46px;
+  display: block;
+  background-color: #F4F6FF;
+  border-radius: 100px;
+  border: 1px solid #d3d3d3;
+  padding: 3px;
+}
+
+.mode-wrapper {
+  display: block;
+  width: fit-content;
+  border: 1px solid #d3d3d3;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: white;
+  /* When Clicked 
+  transform: translateX(100%);
+  transition: transform 250ms; */
+}
+
+.sun-icon,
+.moon-icon {
+  width: 12px;
+}
+
+.moon-icon {
+  display: none;
+}
+
+@media screen and ( min-width: 425px ) {
+  .header-logo {
+    width: 125px;
+  }
+}
+
+@media screen and ( min-width: 1024px ) {
+  .header {
+    padding: 4rem 0;
+  }
+
+  .container {
+    max-width: 992px;
+  }
+}
+
+@media screen and ( min-width: 1440px ) {
+  .header {
+    margin-bottom: 8rem;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+}

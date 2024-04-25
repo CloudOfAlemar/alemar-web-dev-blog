@@ -62,6 +62,7 @@ a {
   padding: 3px;
   border-radius: 50%;
   background-color: white;
+  transition: transform 250ms;
 }
 
 .sun-icon,
@@ -69,7 +70,14 @@ a {
   width: 12px;
 }
 
-.moon-icon {
+/* Dark Mode dm */
+.dm-body {
+  background-color: #1E015B;
+  color: #F4F6FF;
+}
+
+/* State Styles */
+.hide {
   display: none;
 }
 

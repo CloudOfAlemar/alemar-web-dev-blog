@@ -23,12 +23,28 @@ if( localStorage.getItem( "posts" ) ) {
   } );
 }
 
+if( isDarkMode ) {
+  document.querySelectorAll( ".post" ).forEach( post => {
+    post.classList.add( "dm-post" );
+  } );
+} else {
+  document.querySelectorAll( ".post" ).forEach( post => {
+    post.classList.remove( "dm-post" );
+  } );
+}
+
 darkModeToggler.addEventListener( "click", function() {
   if( !isDarkMode ) {
     applyCommonDMStyles();
+    document.querySelectorAll( ".post" ).forEach( post => {
+      post.classList.add( "dm-post" );
+    } );
     isDarkMode = true;
   } else {
     removeCommonDMStyles();
+    document.querySelectorAll( ".post" ).forEach( post => {
+      post.classList.remove( "dm-post" );
+    } );
     isDarkMode = false;
   }
 } );

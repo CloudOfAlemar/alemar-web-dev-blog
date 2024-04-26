@@ -35,7 +35,8 @@ a {
   padding: 2rem 0;
 }
 
-.header-logo {
+.header-logo,
+.header-logo-dm {
   width: 100px;
 }
 
@@ -90,7 +91,8 @@ a {
 }
 
 @media screen and ( min-width: 425px ) {
-  .header-logo {
+  .header-logo,
+  .header-logo-dm {
     width: 125px;
   }
 }

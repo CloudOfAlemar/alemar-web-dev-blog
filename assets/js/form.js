@@ -19,9 +19,13 @@ formBtn.addEventListener( "click", function() {
 darkModeToggler.addEventListener( "click", function() {
   if( !isDarkMode ) {
     applyCommonDMStyles();
+    landingIntroArea.classList.add( "dm-landing-intro-area" );
+    formBtn.classList.add( "dm-form-btn" );
     isDarkMode = true;
   } else {
     removeCommonDMStyles();
+    landingIntroArea.classList.remove( "dm-landing-intro-area" );
+    formBtn.classList.add( "dm-form-btn" );
     isDarkMode = false;
   }
 } );

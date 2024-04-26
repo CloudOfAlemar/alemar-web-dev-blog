@@ -1,5 +1,7 @@
 
 // Common Page Selections
+const headerLogo = document.querySelector( ".header-logo" );
+const headerLogoDM = document.querySelector( ".header-logo-dm" );
 const darkModeToggler = document.querySelector( ".dark-mode-toggler" );
 const modeWrapper = document.querySelector( ".mode-wrapper" );
 const sunIcon = document.querySelector( ".sun-icon" );
@@ -21,15 +23,20 @@ let postsArray = localStorage.getItem( "posts" ) ? JSON.parse( localStorage.getI
 let isDarkMode = localStorage.getItem( "isDarkMode" ) ? JSON.parse( localStorage.getItem( "isDarkMode" ) ) : false;
 
 // Common Functions
-const initializeCommonDMStyles = function() {
-  if( isDarkMode ) {
-    applyCommonDMStyles();
-  } else {
-    removeCommonDMStyles();
-  }
+
+const applyDMLogo = function() {
+  headerLogo.classList.add( "hide" );
+  headerLogoDM.classList.remove( "hide" );
+}
+
+const removeDMLogo = function() {
+  headerLogo.classList.remove( "hide" );
+  headerLogoDM.classList.add( "hide" );
 }
 
 const applyCommonDMStyles = function() {
+  document.body.classList.add( "dm-body" );
+  applyDMLogo();
   darkModeToggler.classList.add( "dm-dark-mode-toggler" );
   modeWrapper.classList.add( "dm-mode-wrapper" )
   sunIcon.classList.add( "hide" );
@@ -37,8 +44,20 @@ const applyCommonDMStyles = function() {
 }
 
 const removeCommonDMStyles = function() {
+  document.body.classList.remove( "dm-body" );
+  removeDMLogo();
   darkModeToggler.classList.remove( "dm-dark-mode-toggler" );
   modeWrapper.classList.remove( "dm-mode-wrapper" )
   sunIcon.classList.remove( "hide" );
   moonIcon.classList.add( "hide" );
+}
+
+const initializeCommonDMStyles = function() {
+  if( isDarkMode ) {
+    applyCommonDMStyles();
+    applyDMLogo();
+  } else {
+    removeCommonDMStyles();
+    removeDMLogo();
+  }
 }

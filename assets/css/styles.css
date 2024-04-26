@@ -76,6 +76,14 @@ a {
   color: #F4F6FF;
 }
 
+.dm-dark-mode-toggler {
+  background-color: gray;
+}
+
+.dm-mode-wrapper {
+  transform: translateX(100%);
+}
+
 /* State Styles */
 .hide {
   display: none;

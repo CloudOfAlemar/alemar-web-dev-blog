@@ -60,6 +60,11 @@
   margin-left: 1rem;
 }
 
+/* Dark Mode dm */
+.dm-post {
+  border-color: #F4F6FF;
+}
+
 @media screen and ( min-width: 1024px ) {
   .blog-author {
     text-align: center;

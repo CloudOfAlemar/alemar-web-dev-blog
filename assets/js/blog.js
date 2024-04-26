@@ -1,15 +1,15 @@
 
-const createPost = function( parent, titleValue, contentValue, usernameValue ) {
+const createPost = function( parent, postObj ) {
   const post = document.createElement( "article" );
   post.classList.add( "post" );
   const postHeading = document.createElement( "h2" );
-  postHeading.textContent = titleValue;
+  postHeading.textContent = postObj.title;
   postHeading.classList.add( "post-heading" );
   const postContent = document.createElement( "p" );
-  postContent.textContent = contentValue;
+  postContent.textContent = postObj.content;
   postContent.classList.add( "post-content" );
   const postAuthor = document.createElement( "p" );
-  postAuthor.textContent = usernameValue;
+  postAuthor.textContent = postObj.username;
   postAuthor.classList.add( "post-author" );
   post.insertAdjacentElement( "beforeend", postHeading );
   post.insertAdjacentElement( "beforeend", postContent );
@@ -18,9 +18,23 @@ const createPost = function( parent, titleValue, contentValue, usernameValue ) {
 }
 
 if( localStorage.getItem( "posts" ) ) {
-  const dataArray = JSON.parse( localStorage.getItem( "posts" ) );
-  dataArray.forEach( dataObj => {
-    const { title, content, username } = dataObj;
-    createPost( postsContainer, title, content, username );
+  JSON.parse( localStorage.getItem( "posts" ) ).forEach( postObj => {
+    createPost( postsContainer, postObj );
   } );
 }
+
+darkModeToggler.addEventListener( "click", function() {
+  if( !isDarkMode ) {
+    applyCommonDMStyles();
+    isDarkMode = true;
+  } else {
+    removeCommonDMStyles();
+    isDarkMode = false;
+  }
+} );
+
+backBtn.addEventListener( "click", function() {
+  localStorage.setItem( "isDarkMode", isDarkMode );
+} );
+
+initializeCommonDMStyles();

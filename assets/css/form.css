@@ -82,14 +82,6 @@
   background-color: #483d8b;
 }
 
-.dm-dark-mode-toggler {
-  background-color: gray;
-}
-
-.dm-mode-wrapper {
-  transform: translateX(100%);
-}
-
 .dm-form-btn {
   background-color: #5271FF;
 }

@@ -10,7 +10,7 @@ retrieve it and display the post dynamically using Javascript.
 - JavaScript
 
 ## Links
-[Link to Live Site]()
+[Link to Live Site](https://cloudofalemar.github.io/alemar-web-dev-blog/)
 
 ## Screenshot
 ![Alemar Web Dev Blog Screenshot](./assets/images/alemar-web-dev-screenshot.png)
